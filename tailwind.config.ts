@@ -120,20 +120,31 @@ export default {
 				},
 				'glitch': {
 					'0%': { transform: 'translate(0)' },
-					'20%': { transform: 'translate(-2px, 2px)' },
-					'40%': { transform: 'translate(-2px, -2px)' },
-					'60%': { transform: 'translate(2px, 2px)' },
-					'80%': { transform: 'translate(2px, -2px)' },
+					'20%': { transform: 'translate(-1px, 1px)' },
+					'40%': { transform: 'translate(-1px, -1px)' },
+					'60%': { transform: 'translate(1px, 1px)' },
+					'80%': { transform: 'translate(1px, -1px)' },
 					'100%': { transform: 'translate(0)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'shadow-dance': {
+					'0%': { filter: 'drop-shadow(0 0 10px rgba(128, 0, 32, 0.3))' },
+					'50%': { filter: 'drop-shadow(0 0 30px rgba(128, 0, 32, 0.6))' },
+					'100%': { filter: 'drop-shadow(0 0 10px rgba(128, 0, 32, 0.3))' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'pulse-glow': 'pulse-glow 3s infinite',
-				'flicker': 'flicker 3s infinite',
-				'glitch': 'glitch 0.3s linear infinite'
+				'pulse-glow': 'pulse-glow 4s infinite',
+				'flicker': 'flicker 6s infinite',
+				'glitch': 'glitch 0.5s linear infinite',
+				'float': 'float 4s ease-in-out infinite',
+				'shadow-dance': 'shadow-dance 3s ease-in-out infinite'
 			}
 		}
 	},

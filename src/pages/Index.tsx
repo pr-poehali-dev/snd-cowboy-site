@@ -13,7 +13,7 @@ const Index = () => {
     const interval = setInterval(() => {
       setIsFlickering(true);
       setTimeout(() => setIsFlickering(false), 200);
-    }, Math.random() * 5000 + 3000);
+    }, Math.random() * 10000 + 8000);
 
     return () => clearInterval(interval);
   }, []);
@@ -38,7 +38,7 @@ const Index = () => {
       <nav className={`bg-horror-shadow/95 backdrop-blur-sm border-b-2 border-horror-blood relative ${isFlickering ? 'animate-flicker' : ''}`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-oswald font-bold text-horror-red tracking-wider animate-glitch">
+            <h1 className="text-3xl font-oswald font-bold text-horror-red tracking-wider">
               💀 SNUFF & DUST 💀
               <div className="text-xs text-horror-bone/60 font-roboto tracking-normal">
                 Мертвецкая Дуэль
@@ -83,7 +83,7 @@ const Index = () => {
                 />
               </div>
               <div className="relative z-10">
-                <h2 className="text-6xl font-oswald font-bold text-horror-red mb-4 animate-glitch drop-shadow-2xl">
+                <h2 className="text-6xl font-oswald font-bold text-horror-red mb-4 drop-shadow-2xl animate-shadow-dance">
                   ⚰️ ГОТОВ УМЕРЕТЬ? 🔫
                 </h2>
                 <p className="text-xl text-horror-bone/80 mb-8 max-w-2xl mx-auto filter contrast-125">
@@ -98,32 +98,136 @@ const Index = () => {
               </div>
             </div>
 
+            {/* Church Image */}
+            <div className="relative mb-12">
+              <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm overflow-hidden">
+                <div className="relative">
+                  <img 
+                    src="/img/1f6763de-37c6-4179-9411-dfefa8d4e998.jpg" 
+                    alt="Пустынная церковь" 
+                    className="w-full h-80 object-cover filter sepia contrast-110 saturate-75"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-horror-shadow/80 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-center">
+                    <h3 className="text-2xl font-oswald font-bold text-horror-bone drop-shadow-lg">
+                      Последняя Молитва
+                    </h3>
+                    <p className="text-horror-bone/80 font-roboto">
+                      Здесь погребены мечты о спасении...
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-horror-bone font-oswald">Душ забрано</CardTitle>
+                <CardHeader className="text-center pb-2">
+                  <CardTitle className="text-horror-bone font-oswald text-sm">Душ забрано</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-4xl font-bold text-horror-red text-center animate-flicker">1,247</div>
+                <CardContent className="pt-0">
+                  <div className="text-3xl font-bold text-horror-red text-center">1,247</div>
                 </CardContent>
               </Card>
               <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-horror-bone font-oswald">Мертвецов в игре</CardTitle>
+                <CardHeader className="text-center pb-2">
+                  <CardTitle className="text-horror-bone font-oswald text-sm">Мертвецов в игре</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-4xl font-bold text-horror-red text-center animate-flicker">342</div>
+                <CardContent className="pt-0">
+                  <div className="text-3xl font-bold text-horror-red text-center">342</div>
                 </CardContent>
               </Card>
               <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-horror-bone font-oswald">Скорость смерти</CardTitle>
+                <CardHeader className="text-center pb-2">
+                  <CardTitle className="text-horror-bone font-oswald text-sm">Скорость смерти</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-4xl font-bold text-horror-red text-center animate-flicker">0.12s</div>
+                <CardContent className="pt-0">
+                  <div className="text-3xl font-bold text-horror-red text-center">0.12s</div>
                 </CardContent>
               </Card>
+              <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
+                <CardHeader className="text-center pb-2">
+                  <CardTitle className="text-horror-bone font-oswald text-sm">Последние слова</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="text-3xl font-bold text-horror-red text-center">"...прости"</div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* News/Events Section */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-oswald font-bold text-horror-red mb-6 text-center">
+                📰 Мертвецкие Новости 📰
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-horror-bone font-oswald flex items-center gap-2">
+                      🤠 Новые проклятия
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-horror-bone/80">
+                      На кладбище обнаружены новые магические пули. 
+                      Они позволяют убивать даже призраков...
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-horror-bone font-oswald flex items-center gap-2">
+                      ⚰️ Ночной турнир
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-horror-bone/80">
+                      Каждую полночь на кладбище проходит 
+                      специальный турнир для проклятых стрелков.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Weapons Arsenal */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-oswald font-bold text-horror-red mb-6 text-center">
+                🔫 Арсенал Смерти 🔫
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
+                  <CardHeader className="text-center">
+                    <div className="text-4xl mb-2">🔫</div>
+                    <CardTitle className="text-horror-bone font-oswald">Проклятый Кольт</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-horror-bone/80 text-sm">Огнестрел с проклятыми пулями</p>
+                    <div className="text-horror-red font-bold">Урон: 666</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
+                  <CardHeader className="text-center">
+                    <div className="text-4xl mb-2">🗡️</div>
+                    <CardTitle className="text-horror-bone font-oswald">Кинжал Мертвеца</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-horror-bone/80 text-sm">Клинок, форгованный из слез душ</p>
+                    <div className="text-horror-red font-bold">Крит: 100%</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm">
+                  <CardHeader className="text-center">
+                    <div className="text-4xl mb-2">🧨</div>
+                    <CardTitle className="text-horror-bone font-oswald">Мина Покоя</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-horror-bone/80 text-sm">Взрывчатка, которая отправляет в ад</p>
+                    <div className="text-horror-red font-bold">Массовый урон</div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         )}
@@ -136,7 +240,7 @@ const Index = () => {
                   <AvatarImage src="/img/404016b3-5729-4e9c-8af7-788325fb91e0.jpg" />
                   <AvatarFallback className="bg-horror-black text-horror-red">💀</AvatarFallback>
                 </Avatar>
-                <CardTitle className="text-2xl font-oswald text-horror-red animate-glitch">Потерянная Душа</CardTitle>
+                <CardTitle className="text-2xl font-oswald text-horror-red">Потерянная Душа</CardTitle>
                 <CardDescription className="text-horror-bone/70">Новобранец в аду</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -146,7 +250,7 @@ const Index = () => {
                     <div className="text-horror-bone/70">Убийств</div>
                   </div>
                   <div className="bg-horror-black/50 p-4 rounded border border-horror-blood">
-                    <div className="text-2xl font-bold text-horror-red animate-flicker">8</div>
+                    <div className="text-2xl font-bold text-horror-red">8</div>
                     <div className="text-horror-bone/70">Смертей</div>
                   </div>
                 </div>
@@ -165,7 +269,7 @@ const Index = () => {
 
         {activeTab === 'rating' && (
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <h2 className="text-3xl font-oswald font-bold text-horror-red text-center mb-8 animate-glitch">
+            <h2 className="text-3xl font-oswald font-bold text-horror-red text-center mb-8">
               ⚰️ МЕРТВЕЦКИЙ РЕЙТИНГ ⚰️
             </h2>
             <div className="space-y-4">
@@ -173,7 +277,7 @@ const Index = () => {
                 <Card key={player.name} className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm hover:border-horror-red transition-colors">
                   <CardContent className="flex items-center justify-between p-6">
                     <div className="flex items-center space-x-4">
-                      <div className="text-2xl font-bold text-horror-red animate-flicker">
+                      <div className="text-2xl font-bold text-horror-red">
                         #{index + 1}
                       </div>
                       <Avatar className="border-2 border-horror-blood">
@@ -199,7 +303,7 @@ const Index = () => {
 
         {activeTab === 'game' && (
           <div className="max-w-2xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl font-oswald font-bold text-horror-red mb-8 animate-glitch">
+            <h2 className="text-4xl font-oswald font-bold text-horror-red mb-8">
               ⚡ АРЕНА СМЕРТИ ⚡
             </h2>
             <Card className="bg-horror-shadow/80 border-2 border-horror-blood backdrop-blur-sm relative overflow-hidden">
@@ -212,7 +316,7 @@ const Index = () => {
               </div>
               <CardContent className="p-16 relative z-10">
                 <div className="space-y-8">
-                  <div className="text-8xl animate-glitch">💀</div>
+                  <div className="text-8xl animate-float">💀</div>
                   <div className="space-y-4">
                     <p className="text-xl text-horror-bone">
                       Приготовься к последней дуэли своей жизни...
@@ -234,13 +338,13 @@ const Index = () => {
             <div className="mt-8 grid grid-cols-2 gap-4">
               <Card className="bg-horror-shadow/60 border border-horror-blood">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-horror-red animate-flicker">0.45s</div>
+                  <div className="text-2xl font-bold text-horror-red">0.45s</div>
                   <div className="text-horror-bone/70">Лучшая смерть</div>
                 </CardContent>
               </Card>
               <Card className="bg-horror-shadow/60 border border-horror-blood">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-horror-red animate-flicker">3</div>
+                  <div className="text-2xl font-bold text-horror-red">3</div>
                   <div className="text-horror-bone/70">Череда убийств</div>
                 </CardContent>
               </Card>
