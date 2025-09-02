@@ -67,20 +67,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				cowboy: {
-					brown: '#5D2A0A',
-					tan: '#A0522D',
-					sand: '#8B6914',
-					cream: '#D2B48C',
-					dark: '#1C0E08'
-				},
-				horror: {
-					blood: '#800020',
-					bone: '#E8DCC6',
-					shadow: '#1A0F1A',
-					red: '#B22222',
-					black: '#0D0D0D',
-					gray: '#2E2E2E',
-					skull: '#F5F5DC'
+					brown: '#8B4513',
+					tan: '#D2691E',
+					sand: '#F4A460',
+					cream: '#FFE4B5',
+					dark: '#2F1B14'
 				}
 			},
 			borderRadius: {
@@ -110,30 +101,16 @@ export default {
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
 				'pulse-glow': {
-					'0%': { boxShadow: '0 0 5px rgba(128, 0, 32, 0.3)' },
-					'50%': { boxShadow: '0 0 25px rgba(128, 0, 32, 0.7), 0 0 50px rgba(178, 34, 34, 0.4)' },
-					'100%': { boxShadow: '0 0 5px rgba(128, 0, 32, 0.3)' }
-				},
-				'flicker': {
-					'0%, 18%, 22%, 25%, 53%, 57%, 100%': { opacity: '1' },
-					'20%, 24%, 55%': { opacity: '0.4' }
-				},
-				'glitch': {
-					'0%': { transform: 'translate(0)' },
-					'20%': { transform: 'translate(-2px, 2px)' },
-					'40%': { transform: 'translate(-2px, -2px)' },
-					'60%': { transform: 'translate(2px, 2px)' },
-					'80%': { transform: 'translate(2px, -2px)' },
-					'100%': { transform: 'translate(0)' }
+					'0%': { boxShadow: '0 0 5px rgba(139, 69, 19, 0.5)' },
+					'50%': { boxShadow: '0 0 20px rgba(139, 69, 19, 0.8)' },
+					'100%': { boxShadow: '0 0 5px rgba(139, 69, 19, 0.5)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'pulse-glow': 'pulse-glow 3s infinite',
-				'flicker': 'flicker 3s infinite',
-				'glitch': 'glitch 0.3s linear infinite'
+				'pulse-glow': 'pulse-glow 2s infinite'
 			}
 		}
 	},
